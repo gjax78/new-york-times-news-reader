@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react'
 import fetchAPI from '../../apiCalls'
+import Header from '../Header/Header'
 
 const App = () => {
   const [articles, setArticles] = useState([])
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>NY Times News Reader</h1>
+      <Header />
     </div>
   )
 }
