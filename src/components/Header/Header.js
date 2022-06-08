@@ -1,7 +1,13 @@
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
-  <h1>Header</h1>
+  return (
+    <header className='header'>
+      <h1>NY Times News Reader</h1>
+      <button className='home-button'>Home</button>
+    </header>
+  )
 }
 
-export default Header
+export default Header;
