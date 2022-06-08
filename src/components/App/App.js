@@ -6,9 +6,9 @@ import Articles from '../Articles/Articles'
 import Search from '../Search/Search'
 import { Route} from 'react-router-dom'
 
-
 const App = () => {
   const [articles, setArticles] = useState([])
+  const [image, setImage] = useState('')
   const [error, setError] = useState('')
   const [search, setSearch] = useState('')
 
@@ -29,7 +29,7 @@ const App = () => {
       <Header />
       <Route exact path='/'>
         <Search setSearch={setSearch}/>
-        <Articles articles={filteredArticles} />
+        <Articles articles={filteredArticles}/>
       </Route>
     </div>
   )
