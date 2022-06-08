@@ -2,19 +2,16 @@ import './Articles.css'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
 const Articles = ({ articles }) => {
-  let counter = 0
-
   const cards = articles.map(article => (
     <ArticleCard
-      key={counter++}
+      key={Date.now()}
       genre={article.section}
       title={article.title}
       abstract={article.abstract}
       url={article.url}
       byline={article.byline}
       published={article.published_date}
-      image={article.multimedia[0].url}
-      alt={article.multimedia[0].caption}
+      multimedia={article.multimedia}
     />
   ))
 
