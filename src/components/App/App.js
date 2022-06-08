@@ -3,12 +3,14 @@ import React, {useState, useEffect} from 'react'
 import fetchAPI from '../../apiCalls'
 import Header from '../Header/Header'
 import Articles from '../Articles/Articles'
+import Search from '../Search/Search'
 import { Route} from 'react-router-dom'
 
 
 const App = () => {
   const [articles, setArticles] = useState([])
   const [error, setError] = useState('')
+  const [search, setSearch] = useState('')
 
   const fetchStories = () => {
     fetchAPI.getData()
@@ -20,11 +22,14 @@ const App = () => {
     fetchStories()
   }, [])
 
+  const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(search) || article.title.includes(search));
+
   return (
     <div className="App">
       <Header />
       <Route exact path='/'>
-        <Articles articles={articles} />
+        <Search setSearch={setSearch}/>
+        <Articles articles={filteredArticles} />
       </Route>
     </div>
   )
