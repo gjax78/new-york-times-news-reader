@@ -25,3 +25,13 @@
 h1 {
   margin: 0;
 }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .home-button {
+    top: 1.7%;
+    left: 85%;
+  }
+}
