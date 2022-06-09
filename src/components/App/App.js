@@ -4,8 +4,9 @@ import fetchAPI from '../../apiCalls'
 import Header from '../Header/Header'
 import Articles from '../Articles/Articles'
 import Search from '../Search/Search'
+import Error from '../Error/Error'
 import DetailedView from '../DetailedView/DetailedView'
-import { Route} from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 const App = () => {
   const [articles, setArticles] = useState([])
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
+      <Switch>
       <Route exact path='/'>
         <Search search={search} setSearch={setSearch}/>
         <Articles articles={filteredArticles}/>
@@ -43,6 +45,14 @@ const App = () => {
             )
           }}
         />
+
+      <Route >
+        <Redirect to='/error' />
+        <Error
+          error={error}
+        />
+      </Route>
+    </Switch>
     </div>
   )
 }
