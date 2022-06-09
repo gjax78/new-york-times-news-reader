@@ -1,3 +1,14 @@
 ::placeholder {
   font-family: Tinos, serif;
+  color: black;
+  padding-left: 2%;
+}
+
+.controlled-search {
+  background: #C1BFBC;
+  border: none;
+  height: 25px;
+  width: 15%;
+  margin-top: 20px;
+  border-radius: 2px;
 }
