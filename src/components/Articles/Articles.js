@@ -4,12 +4,10 @@ import ArticleCard from '../ArticleCard/ArticleCard'
 const Articles = ({ articles }) => {
   const cards = articles.map((article, index) => (
     <ArticleCard
+      {...article}
       key={index}
       id={article.short_url.split('/')[3]}
-      title={article.title}
-      abstract={article.abstract}
-      multimedia={article.multimedia}
-      />
+    />
   ))
 
   return (
