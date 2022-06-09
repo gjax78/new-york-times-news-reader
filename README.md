@@ -1,6 +1,6 @@
 # NYT Top Stories
 
-This application was built using the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview) and features live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world.
+[New York Times News Reader](newyorktimes-newsreader.netlify.app) was built using the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview) and features live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world.
 
 ![gif](https://user-images.githubusercontent.com/88151743/172921235-b418c538-7d75-4832-887e-399e005a0cc8.gif)
 
