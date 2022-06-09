@@ -4,11 +4,11 @@ import fetchAPI from '../../apiCalls'
 import Header from '../Header/Header'
 import Articles from '../Articles/Articles'
 import Search from '../Search/Search'
+import DetailedView from '../DetailedView/DetailedView'
 import { Route} from 'react-router-dom'
 
 const App = () => {
   const [articles, setArticles] = useState([])
-  const [image, setImage] = useState('')
   const [error, setError] = useState('')
   const [search, setSearch] = useState('')
 
@@ -28,9 +28,21 @@ const App = () => {
     <div className="App">
       <Header />
       <Route exact path='/'>
-        <Search setSearch={setSearch}/>
+        <Search search={search} setSearch={setSearch}/>
         <Articles articles={filteredArticles}/>
       </Route>
+
+      <Route 
+          exact path='/article/:id' 
+          render={({ match }) => {
+            return (
+              <DetailedView
+                id={match.params.id}
+                articles={articles}
+              />
+            )
+          }}
+        />
     </div>
   )
 }
