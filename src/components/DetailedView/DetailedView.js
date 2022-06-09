@@ -1,4 +1,5 @@
 import './DetailedView.css';
+import PropTypes from 'prop-types'
 
 const DetailedView = ({ articles, id }) => {
   const selectedArticle = articles.find(article => article.short_url.split('/')[3] === id)
@@ -23,3 +24,8 @@ const DetailedView = ({ articles, id }) => {
 }
 
 export default DetailedView;
+
+DetailedView.propTypes = {
+  articles: PropTypes.array.isRequired, 
+  id: PropTypes.string.isRequired
+}
