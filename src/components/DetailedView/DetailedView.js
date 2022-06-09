@@ -14,7 +14,7 @@ const DetailedView = ({ articles, id }) => {
           <h1>{selectedArticle.title}</h1>
           <p>{selectedArticle.abstract}</p>
           <p>{selectedArticle.byline}</p>
-          <a className='article-link' href={selectedArticle.short_url} target='_blank'>Read More</a>
+          <a className='article-link' href={selectedArticle.short_url} target='_blank' rel="noreferrer">Read More</a>
           <p>{selectedArticle.updated_date}</p>
           <p>{selectedArticle.section} {selectedArticle.subsection}</p>
         </div>
