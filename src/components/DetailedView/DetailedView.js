@@ -6,9 +6,6 @@ const DetailedView = ({ articles, id }) => {
 
   return(
     <div className='details-viewpage'>
-      <Link to='/'>
-        <button>Back</button>
-      </Link>
       <div className='article-details'>
         <div className='img-container'>
           <img src={selectedArticle.multimedia[1].url} alt={selectedArticle.multimedia[1].caption} />
