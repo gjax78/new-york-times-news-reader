@@ -1,5 +1,4 @@
 import './DetailedView.css';
-import { Link } from 'react-router-dom';
 
 const DetailedView = ({ articles, id }) => {
   const selectedArticle = articles.find(article => article.short_url.split('/')[3] === id)
