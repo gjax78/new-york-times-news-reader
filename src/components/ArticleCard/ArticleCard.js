@@ -2,7 +2,7 @@ import './ArticleCard.css'
 import { Link } from 'react-router-dom';
 
 const ArticleCard = ({ title, abstract, id, multimedia }) => {
- let images = multimedia ? <img src={multimedia[1].url} alt={multimedia[1].caption} /> : null
+ let images = multimedia ? <img src={multimedia[1].url} alt={multimedia[1].caption} className='article-image'/> : null
   
   return(
     <article className='article-card'>
