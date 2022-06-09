@@ -38,11 +38,13 @@ const App = () => {
           exact path='/article/:id' 
           render={({ match }) => {
             return (
+              articles.length ?
               <DetailedView
                 id={match.params.id}
                 articles={articles}
               />
-            )
+              : null 
+            ) 
           }}
         />
 

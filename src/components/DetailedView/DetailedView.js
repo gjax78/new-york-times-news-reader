@@ -1,4 +1,5 @@
 import './DetailedView.css';
+import PropTypes from 'prop-types'
 
 const DetailedView = ({ articles, id }) => {
   const selectedArticle = articles.find(article => article.short_url.split('/')[3] === id)
@@ -13,7 +14,7 @@ const DetailedView = ({ articles, id }) => {
           <h1>{selectedArticle.title}</h1>
           <p>{selectedArticle.abstract}</p>
           <p>{selectedArticle.byline}</p>
-          <a className='article-link' href={selectedArticle.short_url} target='_blank'>Read More</a>
+          <a className='article-link' href={selectedArticle.short_url} target='_blank' rel="noreferrer">Read More</a>
           <p>{selectedArticle.updated_date}</p>
           <p>{selectedArticle.section} {selectedArticle.subsection}</p>
         </div>
@@ -23,3 +24,8 @@ const DetailedView = ({ articles, id }) => {
 }
 
 export default DetailedView;
+
+DetailedView.propTypes = {
+  articles: PropTypes.array.isRequired, 
+  id: PropTypes.string.isRequired
+}
