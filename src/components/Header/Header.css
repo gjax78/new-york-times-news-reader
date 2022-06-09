@@ -4,8 +4,13 @@
   flex-direction: row;
   justify-content: space-around;
   position: absolute;
-  top: 1.6%;
+  top: 1.7%;
   left: 90%;
+  background: #C1BFBC;
+  border: none;
+  border-radius: 2px;
+  height: 20px;
+  align-items: center;
 }
 
 .header {
