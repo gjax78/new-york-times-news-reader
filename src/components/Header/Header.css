@@ -1,0 +1,37 @@
+.home-button {
+  font-family: Tinos, serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 1.7%;
+  left: 90%;
+  background: #C1BFBC;
+  border: none;
+  border-radius: 2px;
+  height: 20px;
+  align-items: center;
+}
+
+.header {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .home-button {
+    top: 1.7%;
+    left: 85%;
+  }
+}

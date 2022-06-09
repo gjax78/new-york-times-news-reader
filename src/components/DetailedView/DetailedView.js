@@ -7,7 +7,7 @@ const DetailedView = ({ articles, id }) => {
     <div className='details-viewpage'>
       <div className='article-details'>
         <div className='img-container'>
-          <img src={selectedArticle.multimedia[1].url} alt={selectedArticle.multimedia[1].caption} />
+          <img src={selectedArticle.multimedia[1].url} alt={selectedArticle.multimedia[1].caption} className='article-image'/>
         </div>
         <div className='details-container'>
           <h1>{selectedArticle.title}</h1>

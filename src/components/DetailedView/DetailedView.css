@@ -1,0 +1,13 @@
+.img-container {
+  margin-top: 50px;
+}
+
+.details-viewpage {
+  height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+  .article-image {
+    height: 200px;
+  }
+}

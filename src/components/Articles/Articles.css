@@ -4,3 +4,15 @@
   grid-gap: 3em;
   margin: 2em;
 }
+
+@media screen and (max-width: 500px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3em;
+    margin: 2em;
+  }
+  .article-image {
+    height: 200px;
+  }
+}

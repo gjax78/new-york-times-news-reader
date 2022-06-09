@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: 'Tinos', serif;
+  background-color: #F6F4F1;
+  height: 100%;
 }
 
 html, body {
