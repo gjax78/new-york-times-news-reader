@@ -1,3 +1,22 @@
 .home-button {
   font-family: Tinos, serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 1.6%;
+  left: 90%;
+}
+
+.header {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+h1 {
+  margin: 0;
 }
